@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".actAspectosApr"
+            android:label="@string/title_activity_act_aspectos_apr" >
+        </activity>
+        <activity
+            android:name=".actLogin"
+            android:label="@string/title_activity_act_login" >
+        </activity>
     </application>
 
 </manifest>
