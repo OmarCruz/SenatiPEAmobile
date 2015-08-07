@@ -36,6 +36,10 @@
             android:name=".actItemEmpresa"
             android:label="@string/title_activity_act_item_empresa" >
         </activity>
+        <activity
+            android:name=".actCalendario"
+            android:label="@string/title_activity_act_calendario" >
+        </activity>
     </application>
 
 </manifest>

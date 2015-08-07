@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="20dp"
+android:paddingRight="20dp"
+android:paddingTop="20dp"
+android:paddingBottom="20dp"
+android:orientation="vertical"
+android:gravity="center_horizontal"
+tools:context="senati.senatipeamobile.actCalendario">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:text="@string/lbl_Instructor"
+    android:id="@+id/lblInstructor" />
+
+<CalendarView
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:paddingTop="50dp"
+    android:paddingBottom="20dp"
+    android:id="@+id/cviCalendario"
+    android:firstDayOfWeek="@integer/dia_semana" />
+
+<Button
+    android:layout_width="@dimen/anchoBotones"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_SiguienteCalendario"
+    android:id="@+id/btnSiguiente"
+    android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
