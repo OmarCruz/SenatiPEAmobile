@@ -32,6 +32,10 @@
             android:name=".actListaEmpresas"
             android:label="@string/title_activity_act_lista_empresas" >
         </activity>
+        <activity
+            android:name=".actItemEmpresa"
+            android:label="@string/title_activity_act_item_empresa" >
+        </activity>
     </application>
 
 </manifest>
