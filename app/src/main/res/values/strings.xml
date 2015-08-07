@@ -24,5 +24,6 @@
     <string name="lbl_ItemEmpresa">Empresa</string>
     <string name="lbl_ItemAprendiz">Aprendiz</string>
     <string name="lbl_ItemHora">Hora</string>
+    <string name="title_activity_act_registro_pea">actRegistroPea</string>
 
 </resources>

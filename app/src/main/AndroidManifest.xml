@@ -24,6 +24,10 @@
             android:name=".actLogin"
             android:label="@string/title_activity_act_login" >
         </activity>
+        <activity
+            android:name=".actRegistroPea"
+            android:label="@string/title_activity_act_registro_pea" >
+        </activity>
     </application>
 
 </manifest>
