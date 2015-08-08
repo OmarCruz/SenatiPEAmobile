@@ -39,6 +39,11 @@
     <string name="title_activity_act_realizar_visita">actRealizarVisita</string>
     <string name="RealizarVisita">Realizar Visita</string>
     <string name="title_activity_aspectos_monitor">AspectosMonitor</string>
+    <string name="title_activity_act_registro_rotaciones">actRegistroRotaciones</string>
+    <string name="RegistroRotaciones">Registro de Rotaciones</string>
+    <string name="Puesto">Puesto</string>
+    <string name="fDesde">Desde:</string>
+    <string name="grabar">Grabar</string>
 
 
 </resources>

@@ -52,6 +52,10 @@
             android:name=".AspectosMonitor"
             android:label="@string/title_activity_aspectos_monitor" >
         </activity>
+        <activity
+            android:name=".actRegistroRotaciones"
+            android:label="@string/title_activity_act_registro_rotaciones" >
+        </activity>
     </application>
 
 </manifest>
