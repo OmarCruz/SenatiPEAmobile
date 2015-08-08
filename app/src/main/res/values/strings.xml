@@ -36,6 +36,9 @@
     <string name="GestionPEA">Gestion PEA</string>
     <string name="Vsita">Mis Visitas</string>
     <string name="Visitas">Mis visitas</string>
+    <string name="title_activity_act_realizar_visita">actRealizarVisita</string>
+    <string name="RealizarVisita">Realizar Visita</string>
+    <string name="title_activity_aspectos_monitor">AspectosMonitor</string>
 
 
 </resources>

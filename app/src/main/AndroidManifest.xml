@@ -44,6 +44,14 @@
             android:name=".sctGestionPea"
             android:label="@string/title_activity_sct_gestion_pea" >
         </activity>
+        <activity
+            android:name=".actRealizarVisita"
+            android:label="@string/title_activity_act_realizar_visita" >
+        </activity>
+        <activity
+            android:name=".AspectosMonitor"
+            android:label="@string/title_activity_aspectos_monitor" >
+        </activity>
     </application>
 
 </manifest>
