@@ -27,6 +27,11 @@
     <string name="title_activity_act_registro_pea">actRegistroPea</string>
 
     <string name="desc_image">imagen</string>
+    <string name="RegistrarPEA">Registrar PEA</string>
+    <string name="SeleccionarPEA">Seleccionar PEA</string>
+    <string name="PorcentajeCumplimiento">Porcentaje de cumplimiento</string>
+    <string name="AgregarPorcCumplimien">Agregar</string>
+    <string name="Continuar">New Button</string>
 
 
 </resources>
