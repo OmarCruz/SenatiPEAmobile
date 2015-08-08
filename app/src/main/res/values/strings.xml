@@ -32,6 +32,10 @@
     <string name="PorcentajeCumplimiento">Porcentaje de cumplimiento</string>
     <string name="AgregarPorcCumplimien">Agregar</string>
     <string name="Continuar">New Button</string>
+    <string name="title_activity_sct_gestion_pea">sctGestionPea</string>
+    <string name="GestionPEA">Gestion PEA</string>
+    <string name="Vsita">Mis Visitas</string>
+    <string name="Visitas">Mis visitas</string>
 
 
 </resources>

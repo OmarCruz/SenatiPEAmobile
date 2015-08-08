@@ -40,6 +40,10 @@
             android:name=".actCalendario"
             android:label="@string/title_activity_act_calendario" >
         </activity>
+        <activity
+            android:name=".sctGestionPea"
+            android:label="@string/title_activity_sct_gestion_pea" >
+        </activity>
     </application>
 
 </manifest>
