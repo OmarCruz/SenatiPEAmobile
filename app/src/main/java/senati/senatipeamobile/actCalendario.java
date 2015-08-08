@@ -11,9 +11,7 @@ package senati.senatipeamobile;
     import android.widget.TextView;
     import android.widget.Toast;
 
-    import java.util.Calendar;
-
-    import senati.app.seguimientopea.beans.Instructor;
+    import senati.senatipeamobile.beans.Instructor;
 
 public class actCalendario extends AppCompatActivity implements CalendarView.OnDateChangeListener, View.OnClickListener {
     Instructor instructor = new Instructor();

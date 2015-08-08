@@ -26,4 +26,7 @@
     <string name="lbl_ItemHora">Hora</string>
     <string name="title_activity_act_registro_pea">actRegistroPea</string>
 
+    <string name="desc_image">imagen</string>
+
+
 </resources>
