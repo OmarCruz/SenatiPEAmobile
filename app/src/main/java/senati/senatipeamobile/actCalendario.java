@@ -7,6 +7,7 @@ package senati.senatipeamobile;
     import android.view.Menu;
     import android.view.MenuItem;
     import android.view.View;
+    import android.widget.Button;
     import android.widget.CalendarView;
     import android.widget.TextView;
     import android.widget.Toast;
@@ -16,6 +17,7 @@ package senati.senatipeamobile;
 public class actCalendario extends AppCompatActivity implements CalendarView.OnDateChangeListener, View.OnClickListener {
     Instructor instructor = new Instructor();
     TextView lblInstructor;
+    Button btnSiguiente;
     CalendarView cviCalendario;
     int Dia, Mes, Año;
 
@@ -26,11 +28,13 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
 
         lblInstructor = (TextView) findViewById( R.id.lblInstructor );
         cviCalendario = (CalendarView) findViewById( R.id.cviCalendario );
+        btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
 
         Bundle bundle = getIntent().getExtras();
         instructor.setInstructor(bundle.getStringArray("Instructor"));
         lblInstructor.setText("Instructor : " + instructor.getNombres());
         cviCalendario.setOnDateChangeListener(this);
+        btnSiguiente.setOnClickListener(this);
     }
 
     @Override

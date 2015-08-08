@@ -5,7 +5,18 @@ package senati.senatipeamobile.beans;
  */
 public class Instructor {
     int idInstructor;
-    String ApellidoPaterno, ApellidoMaterno, NombreP, NombreS;
+    String ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, Usuario, Contraseña;
+
+    public Instructor() {}
+    public Instructor(int idInstructor, String apellidoPaterno, String apellidoMaterno, String nombreP, String nombreS, String Usuario, String Contraseña) {
+        this.idInstructor = idInstructor;
+        ApellidoPaterno = apellidoPaterno;
+        ApellidoMaterno = apellidoMaterno;
+        NombreP = nombreP;
+        NombreS = nombreS;
+        this.Usuario = Usuario;
+        this.Contraseña = Contraseña;
+    }
 
     public int getIdInstructor() {
         return idInstructor;
@@ -26,6 +37,16 @@ public class Instructor {
     public String getNombreS() {
         return NombreS;
     }
+
+    public String getUsuario() {
+        return Usuario;
+    }
+
+    public String getContraseña() {
+        return Contraseña;
+    }
+
+
 
     public String getNombres() {
         return ApellidoPaterno + " " + ApellidoMaterno + ", " + NombreP + " " + NombreS;

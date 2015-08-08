@@ -7,6 +7,13 @@ public class Empresa {
     int idEmpresa, Imagen;
     String RazonSocial, Dirección;
 
+    public Empresa(int idEmpresa, String razonSocial, String dirección, int imagen ) {
+        this.idEmpresa = idEmpresa;
+        Imagen = imagen;
+        RazonSocial = razonSocial;
+        Dirección = dirección;
+    }
+
     public int getIdEmpresa() {
         return idEmpresa;
     }

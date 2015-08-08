@@ -1,11 +1,14 @@
 package senati.senatipeamobile;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-public class actListaEmpresas extends AppCompatActivity {
+public class actListaEmpresas extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +36,11 @@ public class actListaEmpresas extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent( this, actRealizarVisita.class );
+        v.getContext().startActivity( intent );
     }
 }

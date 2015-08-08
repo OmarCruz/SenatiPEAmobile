@@ -19,9 +19,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
+import senati.senatipeamobile.beans.Instructor;
+
 public class actLogin extends AppCompatActivity implements View.OnClickListener {
     EditText txtUsuario, txtContraseña;
     Button btnIngresar;
+    ArrayList<Instructor> aInstructores = new ArrayList<Instructor>();
+    Instructor instructor = new Instructor();
 
     private static String URL_LOGIN_USUARIO = "https://dam-atlas-asterope1.c9.io/app_usuarios/login?";
     private static String USUARIO = "pStrLogin=";
@@ -36,6 +42,14 @@ public class actLogin extends AppCompatActivity implements View.OnClickListener 
         txtContraseña = (EditText) findViewById( R.id.txtContraseña );
         btnIngresar = ( Button ) findViewById( R.id.btnIngresar );
         btnIngresar.setOnClickListener(this);
+        CargarInstructores();
+    }
+
+    private void CargarInstructores() {
+        aInstructores.add( new Instructor(1,"Espinoza","Manrique", "Omar","Ali", "oespinoza", "123"));
+        aInstructores.add( new Instructor(2,"Ramos","Maravi", "Juan","Carlos", "jramos", "123"));
+        aInstructores.add(new Instructor(3, "Castilla", "Solar", "Eduardo", "Jose", "ecastilla", "123"));
+        aInstructores.add(new Instructor(4, "Perez", "Ramos", "Carlos", "", "cperez", "123"));
     }
 
     @Override
@@ -64,17 +78,28 @@ public class actLogin extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         String strUsuario = txtUsuario.getText().toString();
         String strContraseña = txtContraseña.getText().toString();
-        if ( true ) {
+        if ( Validar(strUsuario, strContraseña) ) {
             Bundle bundle = new Bundle();
+            bundle.putStringArray("Instructor", new String[]{ "" + instructor.getIdInstructor() , instructor.getApellidoPaterno(), instructor.getApellidoMaterno(), instructor.getNombreP(), instructor.getNombreS() });
 
-            //bundle.putStringArray("Instructor", new String[]{"1", "Espinoza", "Manrique", "Omar", "Ali"});
+            //LoginUsuario(URL_LOGIN_USUARIO + USUARIO + strUsuario + "&" + CONTRASEÑA + strContraseña);
 
-            LoginUsuario(URL_LOGIN_USUARIO + USUARIO + strUsuario + "&" + CONTRASEÑA + strContraseña);
+            Intent intent = new Intent( this, actCalendario.class );
+            intent.putExtras(bundle);
+            v.getContext().startActivity(intent);
+        } else VerMensaje("Usuario incorrecto");
+    }
 
-            //Intent intent = new Intent( this, actCalendario.class );
-            //intent.putExtras(bundle);
-            //v.getContext().startActivity(intent);
+    private boolean Validar(String strUsuario, String strContraseña) {
+        boolean bolEncontrado = false;
+        for (int i=0; i <= aInstructores.size(); i++ ) {
+            if ( aInstructores.get(i).getUsuario().equals(strUsuario) && aInstructores.get(i).getContraseña().equals(strContraseña)  ) {
+                bolEncontrado = true;
+                instructor = aInstructores.get(i);
+            }
+
         }
+        return bolEncontrado;
     }
 
     private void VerMensaje(String strMensaje) {

@@ -7,6 +7,17 @@ public class Aprendiz {
     int idAprendiz, Imagen;
     String ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, HoraCita, GPS;
 
+    public Aprendiz(int idAprendiz, String apellidoPaterno, String apellidoMaterno, String nombreP, String nombreS, String horaCita, String GPS, int imagen) {
+        this.idAprendiz = idAprendiz;
+        Imagen = imagen;
+        ApellidoPaterno = apellidoPaterno;
+        ApellidoMaterno = apellidoMaterno;
+        NombreP = nombreP;
+        NombreS = nombreS;
+        HoraCita = horaCita;
+        this.GPS = GPS;
+    }
+
     public int getIdAprendiz() {
         return idAprendiz;
     }

@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".actLogin"
-            android:label="@string/app_name" >
+            android:label="Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,12 +41,12 @@
             android:label="@string/title_activity_act_calendario" >
         </activity>
         <activity
-            android:name=".sctGestionPea"
-            android:label="@string/title_activity_sct_gestion_pea" >
+            android:name=".actRealizarVisita"
+            android:label="actRealizarVisita" >
         </activity>
         <activity
-            android:name=".actRealizarVisita"
-            android:label="@string/title_activity_act_realizar_visita" >
+            android:name=".sctGestionPea"
+            android:label="sctGestionPea" >
         </activity>
         <activity
             android:name=".AspectosMonitor"

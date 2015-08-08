@@ -19,5 +19,11 @@ tools:context="senati.senatipeamobile.actListaEmpresas">
     android:paddingTop="20dp"
     android:id="@+id/lstListaEmpresas"
     android:layout_weight="1" />
+<Button
+    android:layout_width="@dimen/anchoBotones"
+    android:layout_height="wrap_content"
+    android:text="@string/btn_Siguiente"
+    android:id="@+id/btnSiguiente"
+    android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
