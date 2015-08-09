@@ -19,7 +19,8 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
     TextView lblInstructor;
     Button btnSiguiente;
     CalendarView cviCalendario;
-    int Dia, Mes, Año;
+    int Dia, Mes, Año, idInstructor;
+    String strInstructor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,9 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
         btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
 
         Bundle bundle = getIntent().getExtras();
-        lblInstructor.setText("Instructor : " + bundle.getString("Instructor"));
+        idInstructor = bundle.getInt( "idInstructor" );
+        strInstructor = bundle.getString( "Instructor" );
+        lblInstructor.setText("Instructor : " + strInstructor );
         cviCalendario.setOnDateChangeListener(this);
         btnSiguiente.setOnClickListener(this);
     }
@@ -72,9 +75,9 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
     @Override
     public void onClick(View v) {
         Bundle bundle = new Bundle();
-        bundle.putInt( "Dia", Dia );
-        bundle.putInt( "Mes", Mes );
-        bundle.putInt( "Año", Año );
+        bundle.putString( "FechaVisita", "" + (Dia < 10 ? "0" : Dia) + "/" + (Mes < 10 ? "0" : Mes  ) +  "/" + "Año" );
+        bundle.putString( "InstructorNombres", strInstructor );
+        bundle.putInt( "idInstructor", idInstructor );
         Intent intent = new Intent( this, actListaEmpresas.class );
         intent.putExtras( bundle );
         v.getContext().startActivity( intent );
