@@ -11,6 +11,7 @@ tools:context="senati.senatipeamobile.actListaEmpresas">
 
 <TextView android:text="@string/lbl_FechaVisita"
     android:layout_width="fill_parent"
+    android:id="@+id/lblFechaVisita"
     android:layout_height="wrap_content" />
 
 <ListView
@@ -22,7 +23,7 @@ tools:context="senati.senatipeamobile.actListaEmpresas">
 <Button
     android:layout_width="@dimen/anchoBotones"
     android:layout_height="wrap_content"
-    android:text="@string/btn_Siguiente"
+    android:text="@string/btn_siguiente"
     android:id="@+id/btnSiguiente"
     android:layout_gravity="center_horizontal" />
 

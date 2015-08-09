@@ -1,62 +1,56 @@
 package senati.senatipeamobile.beans;
 
-/**
- * Created by Omar on 06/08/2015.
- */
 public class Instructor {
-    int idInstructor;
-    String ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, Usuario, Contraseña;
+    int idInstructor, Eliminado;
+    String DNI, ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, Telefonos, Correo, Usuario, Contraseña;
+    byte[] Imagen;
 
     public Instructor() {}
-    public Instructor(int idInstructor, String apellidoPaterno, String apellidoMaterno, String nombreP, String nombreS, String Usuario, String Contraseña) {
-        this.idInstructor = idInstructor;
-        ApellidoPaterno = apellidoPaterno;
-        ApellidoMaterno = apellidoMaterno;
-        NombreP = nombreP;
-        NombreS = nombreS;
-        this.Usuario = Usuario;
-        this.Contraseña = Contraseña;
-    }
 
-    public int getIdInstructor() {
-        return idInstructor;
-    }
+    public void setUsuario(String usuario) { Usuario = usuario; }
+    public void setContraseña(String contraseña) { Contraseña = contraseña; }
+    public void setImagen(byte[] imagen) { Imagen = imagen; }
 
-    public String getApellidoPaterno() {
-        return ApellidoPaterno;
-    }
-
-    public String getApellidoMaterno() {
-        return ApellidoMaterno;
-    }
-
-    public String getNombreP() {
-        return NombreP;
-    }
-
+    public int getIdInstructor() { return idInstructor; }
+    public int getElimiando() { return Eliminado;  }
+    public String getDNI() { return DNI; }
+    public String getApellidoPaterno() { return ApellidoPaterno; }
+    public String getApellidoMaterno() { return ApellidoMaterno; }
+    public String getNombreP() { return NombreP;  }
     public String getNombreS() {
         return NombreS;
     }
+    public String getTelefonos() {
+        return Telefonos;
+    }
+    public String getCorreo() { return Correo; }
+    public String getUsuario() { return Usuario; }
+    public String getContraseña() { return Contraseña; }
+    public byte[] getImagen() { return Imagen; }
 
-    public String getUsuario() {
-        return Usuario;
+    public void setInstructor ( String aDatos[] ) {
+        idInstructor = Integer.parseInt( aDatos[0] );
+        DNI = aDatos[1];
+        ApellidoPaterno = aDatos[2];
+        ApellidoMaterno = aDatos[3];
+        NombreP = aDatos[4];
+        NombreS = aDatos[5];
+        Telefonos = aDatos[6];
+        Correo = aDatos[7];
+        Usuario = aDatos[8];
+        Contraseña = aDatos[9];
+        Eliminado = Integer.parseInt( aDatos[10] );
     }
 
-    public String getContraseña() {
-        return Contraseña;
+    public String[] getInstructor () {
+        return new String[] { "" + idInstructor, DNI, ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, Telefonos, Correo, Usuario, Contraseña, "" + Eliminado };
     }
-
-
 
     public String getNombres() {
         return ApellidoPaterno + " " + ApellidoMaterno + ", " + NombreP + " " + NombreS;
     }
 
-    public void setInstructor ( String aDatos[] ) {
-        idInstructor = Integer.parseInt( aDatos[0] );
-        ApellidoPaterno = aDatos[1];
-        ApellidoMaterno = aDatos[2];
-        NombreP = aDatos[3];
-        NombreS = aDatos[4];
+    public String[] getCampos() {
+        return new String[] {"idInstructor", "DNI", "ApellidoPaterno", "ApellidoMaterno", "NombreP", "NombreS", "Telefonos", "Correo", "Usuario", "Contraseña", "Eliminado" };
     }
 }

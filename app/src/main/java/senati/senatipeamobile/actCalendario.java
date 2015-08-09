@@ -31,8 +31,7 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
         btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
 
         Bundle bundle = getIntent().getExtras();
-        instructor.setInstructor(bundle.getStringArray("Instructor"));
-        lblInstructor.setText("Instructor : " + instructor.getNombres());
+        lblInstructor.setText("Instructor : " + bundle.getString("Instructor"));
         cviCalendario.setOnDateChangeListener(this);
         btnSiguiente.setOnClickListener(this);
     }

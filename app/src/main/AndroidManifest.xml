@@ -21,10 +21,6 @@
             android:label="@string/title_activity_act_aspectos_apr" >
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:label="MainActivity" >
-        </activity>
-        <activity
             android:name=".actRegistroPea"
             android:label="@string/title_activity_act_registro_pea" >
         </activity>
@@ -55,6 +51,10 @@
         <activity
             android:name=".actRegistroRotaciones"
             android:label="@string/title_activity_act_registro_rotaciones" >
+        </activity>
+        <activity
+            android:name=".actRegistrarInstructor"
+            android:label="@string/title_activity_act_registrar_instructor" >
         </activity>
     </application>
 

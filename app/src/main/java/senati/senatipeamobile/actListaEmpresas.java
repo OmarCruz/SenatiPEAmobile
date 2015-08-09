@@ -7,13 +7,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class actListaEmpresas extends AppCompatActivity implements View.OnClickListener {
+    TextView lblFechaVisita;
+    String strFechaVisita;
+    private String fecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lista_empresas);
+
+        lblFechaVisita = (TextView) findViewById( R.id.lblFechaVisita );
+        Bundle bundle = getIntent().getExtras();
+        strFechaVisita = getFecha(bundle);
+        lblFechaVisita.setText( strFechaVisita );
     }
 
     @Override
@@ -42,5 +52,16 @@ public class actListaEmpresas extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         Intent intent = new Intent( this, actRealizarVisita.class );
         v.getContext().startActivity( intent );
+    }
+
+    private void VerMensaje(String strMensaje) {
+        Toast.makeText(this, strMensaje, Toast.LENGTH_SHORT).show();
+    }
+
+    public String getFecha(Bundle bundle) {
+        int Dia = bundle.getInt("Dia");
+        int Mes = bundle.getInt("Mes");
+
+        return "" + ( Dia < 10 ? "0" : Dia  ) +  "/" + ( Mes < 10 ? "0" : Mes  ) +  "/" + bundle.getInt("Año");
     }
 }
