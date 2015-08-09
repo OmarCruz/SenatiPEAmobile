@@ -1,55 +1,46 @@
 package senati.senatipeamobile.beans;
 
-/**
- * Created by Omar on 07/08/2015.
- */
 public class Empresa {
-    int idEmpresa, Imagen;
-    String RazonSocial, Dirección;
+    int idEmpresa;
+    String RazonSocial, TelefonoFijo, TelefonoMovil, Direccion, Mapa;
+    Distrito _Distrito;
 
-    public Empresa(int idEmpresa, String razonSocial, String dirección, int imagen ) {
+    public Empresa(int idEmpresa, String razonSocial, String telefonoFijo, String telefonoMovil, String direccion, String mapa, Distrito _Distrito) {
         this.idEmpresa = idEmpresa;
-        Imagen = imagen;
         RazonSocial = razonSocial;
-        Dirección = dirección;
+        TelefonoFijo = telefonoFijo;
+        TelefonoMovil = telefonoMovil;
+        Direccion = direccion;
+        Mapa = mapa;
+        this._Distrito = _Distrito;
     }
 
     public int getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(int idEmpresa) {
-        this.idEmpresa = idEmpresa;
-    }
-
-    public int getImagen() {
-        return Imagen;
-    }
-
-    public void setImagen(int imagen) {
-        Imagen = imagen;
-    }
-
     public String getRazonSocial() {
         return RazonSocial;
     }
 
-    public void setRazonSocial(String razonSocial) {
-        RazonSocial = razonSocial;
+    public String getTelefonoFijo() {
+        return TelefonoFijo;
     }
 
-    public String getDirección() {
-        return Dirección;
+    public String getTelefonoMovil() {
+        return TelefonoMovil;
     }
 
-    public void setDirección(String dirección) {
-        Dirección = dirección;
+    public String getDireccion() {
+        return Direccion;
     }
 
-    public void setEmpresa ( String aDatos[] ) {
-        idEmpresa = Integer.parseInt( aDatos[0] );
-        RazonSocial = aDatos[1];
-        Dirección = aDatos[2];
-        Imagen = Integer.parseInt( aDatos[3] );
+    public String getMapa() {
+        return Mapa;
     }
+
+    public Distrito get_Distrito() {
+        return _Distrito;
+    }
+
 }

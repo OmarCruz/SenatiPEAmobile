@@ -39,8 +39,8 @@ public class EmpresaAdapter<T> extends ArrayAdapter<T> {
         //Obteniendo instancia de la Tarea en la posición actual
         Empresa item = (Empresa) getItem(position);
 
-        titulo.setText( item.getRazonSocial() );
-        subtitulo.setText( item.getDirección() );
+        //titulo.setText( item.getRazonSocial() );
+        //subtitulo.setText( item.getDirección() );
         //categoria.setImageResource(item.getCategoria());
 
         //Devolver al ListView la fila creada
