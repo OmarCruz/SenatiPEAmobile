@@ -46,7 +46,8 @@ public class Instructor {
         return new String[] { "" + idInstructor, DNI, ApellidoPaterno, ApellidoMaterno, NombreP, NombreS, Telefonos, Correo, Usuario, Contraseña, "" + Eliminado };
     }
 
-    public String getNombres() {
+    @Override
+    public String toString() {
         return ApellidoPaterno + " " + ApellidoMaterno + ", " + NombreP + " " + NombreS;
     }
 

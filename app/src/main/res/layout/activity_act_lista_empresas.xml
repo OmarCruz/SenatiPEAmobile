@@ -12,7 +12,8 @@ tools:context="senati.senatipeamobile.actListaEmpresas">
 <TextView android:text="@string/lbl_FechaVisita"
     android:layout_width="fill_parent"
     android:id="@+id/lblFechaVisita"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" />
 
 <ListView
     android:layout_width="wrap_content"

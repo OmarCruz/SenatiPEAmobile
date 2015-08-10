@@ -63,7 +63,7 @@ public class actLogin extends AppCompatActivity implements View.OnClickListener 
             _Instructor.setContraseña( txtContraseña.getText().toString() );
             if ( _daoInstructor.ValidarInstructor( _Instructor ) ) {
                 Bundle bundle = new Bundle();
-                bundle.putString( "Instructor", _Instructor.getNombres() );
+                bundle.putString( "Instructor", _Instructor.toString() );
                 bundle.putInt( "idInstructor", _Instructor.getIdInstructor() );
                 Intent intent = new Intent( this, actCalendario.class );
                 intent.putExtras(bundle);

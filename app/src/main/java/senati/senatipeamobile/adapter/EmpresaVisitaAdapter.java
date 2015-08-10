@@ -9,10 +9,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import senati.senatipeamobile.beans.Empresa;
+import senati.senatipeamobile.beans.EmpresaVisitar;
 
-public class EmpresaAdapter<T> extends ArrayAdapter<T> {
+public class EmpresaVisitaAdapter<T> extends ArrayAdapter<T> {
 
-    public EmpresaAdapter(Context context, int resource, ArrayList<T> aLista) {
+    public EmpresaVisitaAdapter(Context context, int resource, ArrayList<T> aLista) {
         super(context, resource, aLista);
     }
 
@@ -32,15 +33,15 @@ public class EmpresaAdapter<T> extends ArrayAdapter<T> {
         }
 
         //Obteniendo instancias de los elementos
-        TextView titulo = (TextView) listItemView.findViewById( android.R.id.text1 );
-        TextView subtitulo = (TextView) listItemView.findViewById( android.R.id.text2);
+        TextView txtEmpresa = (TextView) listItemView.findViewById( android.R.id.text1 );
+        TextView txtAprendiz = (TextView) listItemView.findViewById( android.R.id.text2 );
         //ImageView categoria = (ImageView) listItemView.findViewById(R.id.category);
 
         //Obteniendo instancia de la Tarea en la posición actual
-        Empresa item = (Empresa) getItem(position);
+        EmpresaVisitar item = (EmpresaVisitar) getItem(position);
 
-        //titulo.setText( item.getRazonSocial() );
-        //subtitulo.setText( item.getDirección() );
+        txtEmpresa.setText( item.get_Empresa().getRazonSocial() );
+        txtAprendiz.setText( item.get_Aprendiz().toString() );
         //categoria.setImageResource(item.getCategoria());
 
         //Devolver al ListView la fila creada

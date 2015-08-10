@@ -17,6 +17,14 @@ public class Monitor {
         Cargo = cargo;
     }
 
+    public Monitor(int idMonitor, String ApellidoPaterno, String ApellidoMaterno, String NombreP, String NombreS) {
+        this.idMonitor = idMonitor;
+        this.ApellidoMaterno = ApellidoPaterno;
+        this.ApellidoMaterno = ApellidoMaterno;
+        this.NombreP = NombreP;
+        this.NombreS = NombreS;
+    }
+
     public int getIdMonitor() {
         return idMonitor;
     }
@@ -56,4 +64,7 @@ public class Monitor {
     public String getCargo() {
         return Cargo;
     }
+
+    @Override
+    public String toString() { return ApellidoPaterno + " " + ApellidoMaterno + " " +  NombreP + " " + NombreS; }
 }

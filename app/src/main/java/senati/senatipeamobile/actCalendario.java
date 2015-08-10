@@ -75,8 +75,8 @@ public class actCalendario extends AppCompatActivity implements CalendarView.OnD
     @Override
     public void onClick(View v) {
         Bundle bundle = new Bundle();
-        bundle.putString( "FechaVisita", "" + (Dia < 10 ? "0" : Dia) + "/" + (Mes < 10 ? "0" : Mes  ) +  "/" + "Año" );
-        bundle.putString( "InstructorNombres", strInstructor );
+        bundle.putString( "FechaVisita", "" + (Dia < 10 ? "0" : "") + Dia + "/" + (Mes < 10 ? "0" :"" ) + Mes + "/" + Año );
+        bundle.putString( "Instructor", strInstructor );
         bundle.putInt( "idInstructor", idInstructor );
         Intent intent = new Intent( this, actListaEmpresas.class );
         intent.putExtras( bundle );

@@ -1,6 +1,5 @@
 package senati.senatipeamobile;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,36 +13,38 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import senati.senatipeamobile.adapter.EmpresaAdapter;
-import senati.senatipeamobile.beans.Empresa;
-import senati.senatipeamobile.dao.daoInstructor;
+import senati.senatipeamobile.adapter.EmpresaVisitaAdapter;
+import senati.senatipeamobile.beans.EmpresaVisitar;
+import senati.senatipeamobile.dao.daoEmpresas;
 
 public class actListaEmpresas extends AppCompatActivity implements View.OnClickListener {
     TextView lblFechaVisita;
     ListView lstEmpresas;
-    ArrayList<Empresa> aEmpresas;
+    ArrayList<EmpresaVisitar> aEmpresasVisitar;
     ArrayAdapter adaptador;
-    daoInstructor _daoInstructor;
     String strFechaVisita, strInstructor;
     int idInstructor;
+    daoEmpresas _daoEmpresas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_lista_empresas);
-        _daoInstructor = new daoInstructor(this);
-
 
         lblFechaVisita = (TextView) findViewById( R.id.lblFechaVisita );
         lstEmpresas = ( ListView ) findViewById( R.id.lstListaEmpresas );
-        adaptador = new EmpresaAdapter<Empresa>(this, 0, aEmpresas);
-        lstEmpresas.setAdapter( adaptador );
 
         Bundle bundle = getIntent().getExtras();
         strFechaVisita = bundle.getString( "FechaVisita" );
         strInstructor = bundle.getString( "Instructor" );
-        idInstructor = bundle.getInt( "idInstructor" );
-        lblFechaVisita.setText(strFechaVisita);
+        idInstructor = bundle.getInt("idInstructor");
+        lblFechaVisita.setText( "Fecha de Visita : " + strFechaVisita);
+
+        _daoEmpresas = new daoEmpresas(this);
+        aEmpresasVisitar = _daoEmpresas.getEmpresasVisitar( idInstructor, strFechaVisita );
+
+        adaptador = new EmpresaVisitaAdapter<EmpresaVisitar>(this, 0, aEmpresasVisitar);
+        lstEmpresas.setAdapter(adaptador);
     }
 
     @Override

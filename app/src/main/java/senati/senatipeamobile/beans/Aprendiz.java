@@ -13,6 +13,14 @@ public class Aprendiz {
         NombreS = nombreS;
     }
 
+    public Aprendiz(int idAprendiz, String ApellidoPaterno, String ApellidoMaterno, String NombreP, String NombreS ) {
+        this.idAprendiz = idAprendiz;
+        this.ApellidoPaterno = ApellidoPaterno;
+        this.ApellidoMaterno = ApellidoMaterno;
+        this.NombreP = NombreP;
+        this.NombreS = NombreS;
+    }
+
     public int getIdAprendiz() {
         return idAprendiz;
     }
@@ -36,6 +44,9 @@ public class Aprendiz {
     public String getNombreS() {
         return NombreS;
     }
+
+    @Override
+    public String toString() { return ApellidoPaterno + " " + ApellidoMaterno + " " +  NombreP + " " + NombreS; }
 
     public void setAprendiz ( String aDatos[] ) {
         idAprendiz = Integer.parseInt( aDatos[0] );
